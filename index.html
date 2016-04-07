@@ -151,29 +151,533 @@
     </section>
 
     <!-- Disqus Section -->
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-         */
+    <div id="layout" data-tracking-area="layout">
 
-        var disqus_config = function () {
-            this.page.url = 'a unique URL for each page where Disqus is present';
-            this.page.identifier = 'a unique identifier for each page where Disqus is present';
-            this.page.title = 'a unique title for each page where Disqus is present';
-        };
+    <div id="onboard" data-tracking-area="onboard"><div></div></div>
 
-        (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-            var d = document, s = d.createElement('script');
+    <div id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post" style="display: none;"></div>
 
-            s.src = '//EXAMPLE.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+    <div id="global-alert"></div>
 
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <header id="main-nav" data-tracking-area="main-nav">
+    <nav class="nav nav-primary">
+    <ul>
+    <li class="tab-conversation active" data-role="post-count"><a class="publisher-nav-color">
+    <span class="comment-count">
+    3 comments
+    </span>
+
+    <span class="comment-count-placeholder">
+    Comments
+    </span>
+    </a>
+    </li>
+    <li class="tab-community">
+    <a href="https://disqus.com/home/forums/cgmartin/" class="publisher-nav-color" data-action="community-sidebar" data-forum="cgmartin" id="community-tab">
+    <span class="community-name">
+    <strong>cgmartin.com</strong>
+
+    </span>
+
+    <strong class="community-name-placeholder">Community</strong>
+    </a>
+    </li>
+    <li class="dropdown user-menu" data-role="logout" data-dropdown="enabled"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-tid="162">
+    <span class="dropdown-toggle-wrapper">
+
+    <span class="avatar">
+    <img data-role="user-avatar" data-user="88382156" alt="Avatar">
+    </span>
+    <span class="username" data-role="username" data-username="iTamerlanium">
+    Tarlan Isaev
+    </span>
+
+    </span> <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+    <li>
+    <a href="https://disqus.com/by/iTamerlanium/" data-role="user-profile-link" data-action="profile" data-username="iTamerlanium">
+    Your Profile
+    </a>
+    </li>
+    <li>
+    <a href="#" class="media-toggle-on" data-action="toggle-media">Display Media</a>
+    <a href="#" class="media-toggle-off" data-action="toggle-media">Hide Media</a>
+    </li>
+    <li>
+    <a href="https://disqus.com/home/settings/account/">Edit Settings</a>
+    </li>
+
+
+
+    <li>
+    <a href="#" data-action="logout">Logout</a>
+    </li>
+    </ul>
+    </li>
+    <li class="notification-menu" data-role="notification-menu"><a href="https://disqus.com/home/inbox/" class="notification-container" data-action="home" data-home-path="home/inbox/">
+    <span class="notification-icon icon-comment" aria-hidden=""></span>
+    <span class="notification-count" data-role="notification-count"></span>
+    </a>
+    </li>
+    </ul>
+    </nav>
+    </header>
+
+    <section id="conversation" data-role="main" data-tracking-area="main">
+    <div class="nav nav-secondary" data-tracking-area="secondary-nav">
+    <ul>
+    <li id="recommend-button" class="recommend dropdown">
+    <div class="thread-likes"><a href="#" data-action="recommend" title="Recommend this discussion" class="dropdown-toggle ">
+    <span class="icon-heart"></span>
+    <span class="label label-default">Recommend</span>
+    <span class="label label-recommended">Recommended</span>
+    </a>
+    <ul class="dropdown-menu coachmark">
+    <li>
+    <h2>Discussion Recommended!</h2>
+    <p>Recommending means this is a discussion worth sharing. It gets shared to your followers' Disqus feeds, and gives the creator kudos!</p>
+    <a href="https://disqus.com/home/?utm_source=disqus_embed&amp;utm_content=recommend_btn" class="btn btn-primary" target="_blank">
+     Find More Discussions
+    </a>
+    </li>
+    </ul>
+    </div></li>
+    <li id="thread-share-menu" class="dropdown share-menu hidden-sm"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+    <span class="icon-export"></span>
+    <span class="label">Share</span>
+    </a>
+    <ul class="share-menu dropdown-menu">
+    <li class="share">Share this discussion on
+    <ul>
+    <li class="twitter">
+    <a data-action="share:twitter" href="#">Twitter</a>
+    </li>
+    <li class="facebook">
+    <a data-action="share:facebook" href="#">Facebook</a>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li data-role="post-sort" class="dropdown sorting pull-right">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    Sort by Best
+
+
+    <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu pull-right">
+    <li class="selected">
+    <a href="#" data-action="sort" data-sort="popular">Best<i aria-hidden="true" class="icon-checkmark"></i></a>
+    </li>
+
+    <li>
+    <a href="#" data-action="sort" data-sort="desc">Newest<i aria-hidden="true" class="icon-checkmark"></i></a>
+    </li>
+
+    <li>
+    <a href="#" data-action="sort" data-sort="asc">Oldest<i aria-hidden="true" class="icon-checkmark"></i></a>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+
+    <div id="posts">
+    <div id="form"><form class="reply authenticated expanded">
+    <div class="postbox">
+    <div role="alert"></div>
+    <div class="avatar">
+    <a href="https://disqus.com/by/iTamerlanium/" class="user" data-action="profile" data-username="iTamerlanium">
+    <img data-role="user-avatar" data-user="88382156" src="//a.disquscdn.com/uploads/users/8838/2156/avatar92.jpg?1394142218" alt="Avatar">
+    </a>
+    </div>
+
+    <div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div class="textarea" tabindex="0" role="textbox" aria-multiline="true" contenteditable="PLAINTEXT-ONLY" data-role="editable" aria-label="Join the discussion…" style="overflow: auto; max-height: 350px;"><p><br></p></div><div style="display: none;"><ul class="suggestions">
+    <li class="header">
+    <h5>in this conversation</h5>
+    </li>
+    </ul>
+    </div></div>
+    <div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+    <div class="drag-text">
+    ⬇ Drag and drop your images here to upload them.
+    </div>
+    </div>
+    <div class="media-preview empty" data-role="media-preview"><ul data-role="media-legacy-list"></ul>
+    <ul data-role="media-progress-list"></ul>
+    <ul data-role="media-rich-list"></ul>
+    <div class="media-expanded empty" data-role="media-preview-expanded">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-role="media-preview-expanded-image" alt="Media preview placeholder">
+    </div>
+    </div>
+    <div class="edit-alert" role="postbox-alert"></div>
+    <div class="post-actions">
+    <ul class="wysiwyg">
+    <li data-role="media-uploader"><a href="#" tabindex="-1" data-action="attach" class="attach" title="Upload Images"><span>Attach</span></a>
+    <input type="file" data-role="media-upload" tabindex="-1" accept="image/*">
+    </li>
+    </ul>
+    <div class="logged-in">
+    <section>
+    <div class="temp-post" style="text-align: right">
+    <button class="btn">
+    Post as <span data-username="iTamerlanium" data-role="username">Tarlan Isaev</span>
+
+    </button>
+    </div>
+    </section>
+    </div>
+    </div>
+    </div>
+
+    <div data-role="login-form"><div>
+    </div></div>
+    </div>
+    </form></div>
+
+    <button class="alert realtime" style="display: none" data-role="realtime-notification">
+    </button>
+
+    <div id="no-posts" style="display:none"></div>
+
+    <ul id="post-list" class="post-list"><li class="post" id="post-2489150908"><div role="alert"></div>
+    <div data-role="post-content" class="post-content">
+    <ul class="post-menu dropdown" data-role="menu">
+    <li class="collapse">
+    <a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+    </li>
+    <li class="expand">
+    <a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+    </li>
+
+    <li class="" role="menu">
+    <a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+    <i aria-hidden="true" class="icon icon-flag"></i>
+    </a>
+    </li>
+    </ul>
+
+    <div class="indicator"></div>
+
+    <div class="avatar hovercard">
+    <a href="https://disqus.com/by/longyue0521/" class="user" data-action="profile" data-username="longyue0521">
+    <img data-role="user-avatar" data-user="113425235" src="//a.disquscdn.com/uploads/users/11342/5235/avatar92.jpg?1404730894" alt="Avatar">
+    </a>
+    </div>
+    <div class="post-body">
+    <header>
+    <span class="post-byline">
+    <span class="author publisher-anchor-color"><a href="https://disqus.com/by/longyue0521/" data-action="profile" data-username="longyue0521" data-role="username">Longyue Li</a></span>
+
+    </span>
+
+    <span class="post-meta">
+    <span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+    <a href="https://www.cgmartin.com/2016/01/05/bootstrap-blog-hexo-theme/#comment-2489150908" data-role="relative-time" class="time-ago" title="Monday, February 1, 2016 9:24 PM">2 months ago</a>
+    </span>
+
+    </header>
+
+    <div class="post-body-inner">
+    <div class="post-message-container" data-role="message-container">
+    <div class="publisher-anchor-color" data-role="message-content">
+    <div class="post-message " data-role="message" dir="auto">
+    <p>Hi Christopher , Could you please tell me how to display "Table of Contents" in sidebar ?<br>Thanks :)</p>
+    </div>
+
+    <span class="post-media"><ul data-role="post-media-list"></ul></span>
+    </div>
+    </div>
+    <a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+    </div>
+
+    <footer><menu>
+
+    <li class="voting" data-role="voting">
+    <a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+    <span class="updatable count" data-role="likes">0</span>
+    <span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+    </a>
+    <span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+    <span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+    </span>
+    </li>
+    <li class="bullet" aria-hidden="true">•</li>
+
+
+    <li class="reply" data-role="reply-link">
+    <a href="#" data-action="reply">
+    <i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+    <li class="bullet" aria-hidden="true">•</li>
+
+
+    <li class="share">
+    <a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+    <ul>
+    <li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+    <li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+    <li class="link"><a href="https://www.cgmartin.com/2016/01/05/bootstrap-blog-hexo-theme/#comment-2489150908">Link</a></li>
+    </ul>
+    </li>
+
+    <li class="realtime" data-role="realtime-notification:2489150908">
+    <span style="display:none;" class="realtime-replies"></span>
+    <a style="display:none;" href="#" class="btn btn-small"></a>
+    </li>
+
+    </menu>
+    </footer>
+    </div>
+
+    <div data-role="blacklist-form"></div>
+    <div class="reply-form-container" data-role="reply-form"></div>
+    </div>
+
+    <ul data-role="children" class="children"><li class="post" id="post-2489481811"><div role="alert"></div>
+    <div data-role="post-content" class="post-content">
+    <ul class="post-menu dropdown" data-role="menu">
+    <li class="collapse">
+    <a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+    </li>
+    <li class="expand">
+    <a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+    </li>
+
+    <li class="" role="menu">
+    <a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+    <i aria-hidden="true" class="icon icon-flag"></i>
+    </a>
+    </li>
+    </ul>
+
+    <div class="indicator"></div>
+
+    <div class="avatar hovercard">
+    <a href="https://disqus.com/by/c_g_martin/" class="user" data-action="profile" data-username="c_g_martin">
+    <img data-role="user-avatar" data-user="8121893" src="//a.disquscdn.com/uploads/users/812/1893/avatar92.jpg?1454334725" alt="Avatar">
+    </a>
+    </div>
+    <div class="post-body">
+    <header>
+    <span class="post-byline">
+    <span class="author publisher-anchor-color"><a href="https://disqus.com/by/c_g_martin/" data-action="profile" data-username="c_g_martin" data-role="username">Christopher Martin</a></span>
+    <span class="badge moderator">Mod</span>
+
+    <span><a href="https://www.cgmartin.com/2016/01/05/bootstrap-blog-hexo-theme/#comment-2489150908" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Longyue Li</a></span>
+    </span>
+
+    <span class="post-meta">
+    <span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+    <a href="https://www.cgmartin.com/2016/01/05/bootstrap-blog-hexo-theme/#comment-2489481811" data-role="relative-time" class="time-ago" title="Tuesday, February 2, 2016 2:52 AM">2 months ago</a>
+    </span>
+
+    </header>
+
+    <div class="post-body-inner">
+    <div class="post-message-container" data-role="message-container">
+    <div class="publisher-anchor-color" data-role="message-content">
+    <div class="post-message " data-role="message" dir="auto">
+    <p>Hi <a data-dsq-mention="longyue0521:disqus" href="https://disqus.com/by/longyue0521/" rel="nofollow" data-action="profile" data-username="longyue0521" class="mention">Longyue Li</a>. Take a look in the "myblog" branch which has all of the customizations on my site:</p><p>Sidebar TOC (enabled by front-matter "toc: true"):<br><a href="https://github.com/cgmartin/hexo-theme-bootstrap-blog/blob/myblog/layout/_partial/sidebar.ejs#L1-L6" rel="nofollow">https://github.com/cgmartin/he...</a></p><p>And a custom TOC helper:<br><a href="https://github.com/cgmartin/hexo-theme-bootstrap-blog/blob/myblog/scripts/bs_toc.js" rel="nofollow">https://github.com/cgmartin/he...</a></p>
+    </div>
+
+    <span class="post-media"><ul data-role="post-media-list"></ul></span>
+    </div>
+    </div>
+    <a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+    </div>
+
+    <footer><menu>
+
+    <li class="voting" data-role="voting">
+    <a href="#" class="vote-up  count-1" data-action="upvote" title="">
+
+    <span class="updatable count" data-role="likes">1</span>
+    <span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+    </a>
+    <span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+    <span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+    </span>
+    </li>
+    <li class="bullet" aria-hidden="true">•</li>
+
+
+    <li class="reply" data-role="reply-link">
+    <a href="#" data-action="reply">
+    <i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+    <li class="bullet" aria-hidden="true">•</li>
+
+
+    <li class="share">
+    <a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+    <ul>
+    <li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+    <li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+    <li class="link"><a href="https://www.cgmartin.com/2016/01/05/bootstrap-blog-hexo-theme/#comment-2489481811">Link</a></li>
+    </ul>
+    </li>
+
+    <li class="realtime" data-role="realtime-notification:2489481811">
+    <span style="display:none;" class="realtime-replies"></span>
+    <a style="display:none;" href="#" class="btn btn-small"></a>
+    </li>
+
+    </menu>
+    </footer>
+    </div>
+
+    <div data-role="blacklist-form"></div>
+    <div class="reply-form-container" data-role="reply-form"></div>
+    </div>
+
+    <ul data-role="children" class="children"><li class="post" id="post-2489663463"><div role="alert"></div>
+    <div data-role="post-content" class="post-content">
+    <ul class="post-menu dropdown" data-role="menu">
+    <li class="collapse">
+    <a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+    </li>
+    <li class="expand">
+    <a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+    </li>
+
+    <li class="" role="menu">
+    <a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+    <i aria-hidden="true" class="icon icon-flag"></i>
+    </a>
+    </li>
+    </ul>
+
+    <div class="indicator"></div>
+
+    <div class="avatar hovercard">
+    <a href="https://disqus.com/by/longyue0521/" class="user" data-action="profile" data-username="longyue0521">
+    <img data-role="user-avatar" data-user="113425235" src="//a.disquscdn.com/uploads/users/11342/5235/avatar92.jpg?1404730894" alt="Avatar">
+    </a>
+    </div>
+    <div class="post-body">
+    <header>
+    <span class="post-byline">
+    <span class="author publisher-anchor-color"><a href="https://disqus.com/by/longyue0521/" data-action="profile" data-username="longyue0521" data-role="username">Longyue Li</a></span>
+
+    <span><a href="https://www.cgmartin.com/2016/01/05/bootstrap-blog-hexo-theme/#comment-2489481811" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Christopher Martin</a></span>
+    </span>
+
+    <span class="post-meta">
+    <span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+    <a href="https://www.cgmartin.com/2016/01/05/bootstrap-blog-hexo-theme/#comment-2489663463" data-role="relative-time" class="time-ago" title="Tuesday, February 2, 2016 4:55 AM">2 months ago</a>
+    </span>
+
+    </header>
+
+    <div class="post-body-inner">
+    <div class="post-message-container" data-role="message-container">
+    <div class="publisher-anchor-color" data-role="message-content">
+    <div class="post-message " data-role="message" dir="auto">
+    <p>Thank you so much! It helps me a lot! :)</p>
+    </div>
+
+    <span class="post-media"><ul data-role="post-media-list"></ul></span>
+    </div>
+    </div>
+    <a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+    </div>
+
+    <footer><menu>
+
+    <li class="voting" data-role="voting">
+    <a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+    <span class="updatable count" data-role="likes">0</span>
+    <span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+    </a>
+    <span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+    <span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+    </span>
+    </li>
+    <li class="bullet" aria-hidden="true">•</li>
+
+
+    <li class="reply" data-role="reply-link">
+    <a href="#" data-action="reply">
+    <i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+    <li class="bullet" aria-hidden="true">•</li>
+
+
+    <li class="share">
+    <a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+    <ul>
+    <li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+    <li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+    <li class="link"><a href="https://www.cgmartin.com/2016/01/05/bootstrap-blog-hexo-theme/#comment-2489663463">Link</a></li>
+    </ul>
+    </li>
+
+    <li class="realtime" data-role="realtime-notification:2489663463">
+    <span style="display:none;" class="realtime-replies"></span>
+    <a style="display:none;" href="#" class="btn btn-small"></a>
+    </li>
+
+    </menu>
+    </footer>
+    </div>
+
+    <div data-role="blacklist-form"></div>
+    <div class="reply-form-container" data-role="reply-form"></div>
+    </div>
+
+    <ul data-role="children" class="children"></ul>
+
+    </li></ul>
+
+    </li></ul>
+
+    </li></ul>
+
+    <div class="load-more" data-role="more" style="display:none">
+    <a href="#" data-action="more-posts" class="btn">Load more comments</a>
+    </div>
+    </div>
+
+    </section>
+
+    <div id="placement-bottom" data-tracking-area="discovery-south"><div class="post-list" style="height: 0px; visibility: hidden;"></div></div>
+
+    <div id="footer" data-tracking-area="footer">
+    <ul class="disqus-footer">
+    <li class="logo disqus-footer__item"><a href="https://disqus.com" rel="nofollow" title="Powered by Disqus">Powered by Disqus</a></li>
+    <li id="thread-subscribe-button" class="email disqus-footer__item">
+    <div class="default">
+    <a href="#" rel="nofollow" data-action="subscribe" title="Subscribe and get email updates from this discussion"><i aria-hidden="true" class="icon icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon icon-checkmark"></i></a>
+    </div>
+    <div class="form">
+    <div class="input-wrapper"><input id="thread-subscribe-email" type="email" placeholder="yourname@email.com"></div>
+    </div>
+    </li>
+    <li class="install disqus-footer__item">
+    <a href="https://publishers.disqus.com/engage?utm_source=cgmartin&amp;utm_medium=Disqus-Footer" rel="nofollow" target="_blank">
+    <i aria-hidden="true" class="icon icon-disqus"></i>
+    <span class="clip hidden-sm">Add Disqus to your site</span>
+    <span class="clip visible-sm hidden-xs">Add Disqus</span>
+    <span class="clip visible-xs">Add</span>
+    </a>
+    </li>
+    <li class="privacy disqus-footer__item">
+    <a href="https://help.disqus.com/customer/portal/articles/1657951?utm_source=disqus&amp;utm_medium=embed-footer&amp;utm_content=privacy-btn" rel="nofollow" target="_blank">
+    <i aria-hidden="true" class="icon icon-lock"></i>
+    <span class="clip">Privacy</span>
+    </a>
+    </li>
+    </ul>
+    </div>
+    </div>
 
     <!-- Map Section -->
     <div id="map"></div>
