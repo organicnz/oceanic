@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+  <form id="registrationForm" class="form-horizontal"
+      data-fv-framework="bootstrap"
+      data-fv-icon-valid="glyphicon glyphicon-ok"
+      data-fv-icon-invalid="glyphicon glyphicon-remove"
+      data-fv-icon-validating="glyphicon glyphicon-refresh">
+
+      <div class="form-group">
+          <label class="col-xs-3 control-label">Full name</label>
+          <div class="col-xs-4">
+              <input type="text" class="form-control" name="firstName" placeholder="First name"
+                  data-fv-row=".col-xs-4"
+                  data-fv-notempty="true"
+                  data-fv-notempty-message="The first name is required" />
+          </div>
+
+          <div class="col-xs-4">
+              <input type="text" class="form-control" name="lastName" placeholder="Last name"
+                  data-fv-row=".col-xs-4"
+                  data-fv-notempty="true"
+                  data-fv-notempty-message="The last name is required" />
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-xs-3 control-label">Username</label>
+          <div class="col-xs-5">
+              <input type="text" class="form-control" name="username"
+                  data-fv-notempty="true"
+                  data-fv-notempty-message="The username is required"
+
+                  data-fv-stringlength="true"
+                  data-fv-stringlength-min="6"
+                  data-fv-stringlength-max="30"
+                  data-fv-stringlength-message="The username must be more than 6 and less than 30 characters long"
+
+                  data-fv-regexp="true"
+                  data-fv-regexp-regexp="^[a-zA-Z0-9_\.]+$"
+                  data-fv-regexp-message="The username can only consist of alphabetical, number, dot and underscore" />
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-xs-3 control-label">Email address</label>
+          <div class="col-xs-5">
+              <input type="text" class="form-control" name="email"
+                  data-fv-notempty="true"
+                  data-fv-notempty-message="The email address is required"
+
+                  data-fv-emailaddress="true"
+                  data-fv-emailaddress-message="The input is not a valid email address" />
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-xs-3 control-label">Password</label>
+          <div class="col-xs-5">
+              <input type="password" class="form-control" name="password"
+                  data-fv-notempty="true"
+                  data-fv-notempty-message="The password is required"
+
+                  data-fv-different="true"
+                  data-fv-different-field="username"
+                  data-fv-different-message="The password cannot be the same as username" />
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-xs-3 control-label">Gender</label>
+          <div class="col-xs-5">
+              <div class="radio">
+                  <label>
+                      <input type="radio" name="gender" value="male"
+                          data-fv-notempty="true"
+                          data-fv-notempty-message="The gender is required" /> Male
+                  </label>
+              </div>
+              <div class="radio">
+                  <label>
+                      <input type="radio" name="gender" value="female" /> Female
+                  </label>
+              </div>
+              <div class="radio">
+                  <label>
+                      <input type="radio" name="gender" value="other" /> Other
+                  </label>
+              </div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-xs-3 control-label">Date of birth</label>
+          <div class="col-xs-3">
+              <input type="text" class="form-control" name="birthday" placeholder="YYYY/MM/DD"
+                  data-fv-notempty="true"
+                  data-fv-notempty-message="The date of birth is required"
+
+                  data-fv-date="true"
+                  data-fv-date-format="YYYY/MM/DD"
+                  data-fv-date-message="The date of birth is not valid" />
+          </div>
+      </div>
+
+      <div class="form-group">
+          <div class="col-xs-9 col-xs-offset-3">
+              <button type="submit" class="btn btn-primary" name="signup" value="Sign up">Submit</button>
+          </div>
+      </div>
+  </form>
+
+  <script>
+  $(document).ready(function() {
+      $('#registrationForm').formValidation();
+  });
+  </script>
+
+</body>
+
+</html>
